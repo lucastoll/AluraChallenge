@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --azulescuro: #051D3B;
+    --azuldiscord: #5081FB;
+    --azulcobalto: #7BA4FC;
+    --azulclaro: #96B9FD;
+}
+
+body{
+    background-color: var(--azulescuro);
+}
+
+#container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "textblock"
+    "seuprojeto"
+    "personalizacao";
+}

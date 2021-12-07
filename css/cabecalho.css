@@ -1,0 +1,11 @@
+header{
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header div img{
+    margin-top: 0.8rem;
+    margin-right: 0.5rem;
+}
