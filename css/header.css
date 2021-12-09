@@ -5,7 +5,14 @@ header{
     justify-content: space-between;
 }
 
-header div img{
+
+#iconmenu{
     margin-top: 0.8rem;
-    margin-right: 0.5rem;
+    margin-right: 1rem ;
 }
+
+#iconlupa{
+    margin-top: 0.8rem;
+    margin-right: 1rem;
+}
+

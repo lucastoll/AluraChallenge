@@ -22,3 +22,8 @@ body{
     "seuprojeto"
     "personalizacao";
 }
+
+.alinhamento{
+    display: flex;
+    justify-content: center;
+}

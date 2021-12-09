@@ -1,0 +1,45 @@
+#seuprojeto{
+    grid-area: seuprojeto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.formulario{
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    border: none;
+    color: #FFFFFF;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 14px;
+    border: none;
+    outline: none;
+}
+
+#seuprojeto input:focus{
+    background: #41536A;
+}
+
+#seuprojeto input:nth-child(2){
+    height: 3.5rem;
+}
+
+#seuprojeto input:nth-child(3){
+    height: 5rem;
+    line-height: 14px;
+}
+
+label{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}

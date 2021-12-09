@@ -6,25 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AluraDev</title>
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/cabecalho.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/textblock.css">
+    <link rel="stylesheet" href="css/seuprojeto.css">
+    <link rel="stylesheet" href="css/personalizacao.css">
 </head>
 <body>
     <div id="container">
         <header>
             <img src="/img/logo.png" alt="Logo AluraDev" class="cabecalho__logo">
             <div>
-            <img src="img/lupa.png">
-            <img src="img/3bars.png">
+            <img src="img/lupa.png"  id="iconlupa">
+            <img src="img/3bars.png" id="iconmenu">
             </div>
         </header>
         <main>
             <div id="rgbcontainer">
-<!--                 <textarea id="mac" cols="10" rows="10" placeholder="Digite o código."> </textarea> 
- -->                <textarea name="codigo" id="codigo" cols="30" rows="25" placeholder="Digite o código."> </textarea> 
+                <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
+                <textarea name="codigo" cols="10" rows="17" placeholder="Digite o código."></textarea> 
+            </div>
+
+            <div class="alinhamento">
+            <button id="buttonhighlight">Visualizar com o highlight</button>    
+            </div>
+
+            <div id="seuprojeto">
+                <label for="projeto">Seu projeto</label>
+                <input type="text" id="projeto" placeholder="Nome do seu projeto" class="formulario">
+                <input type="text" placeholder="Descrição do seu projeto" class="formulario">
+            </div>
+
+            <div id="personalizacao">
+                <label for="linguagem">Personalização</label>
+                
+            <div id="selectcor">
+                <select id="linguagem">
+                    <option class="formulario">JavaScript</option>
+                    <option class="formulario">Python</option>
+                </select>
+                <input type="color" id="cor">
+            </div>
+
+
+                <input type="submit" id="salvarprojeto" value="Salvar projeto">
             </div>
         </main>
     </div>
 
 </body>
+<script src="myscript.js"></script>
 </html>
