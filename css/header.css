@@ -1,18 +1,41 @@
 header{
     grid-area: header;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1024px;
+    margin-top: 1rem;
 }
 
+#logo{
+    margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 767px) {
+    #logo{
+        height: 4rem;
+    }
+}
 
 #iconmenu{
-    margin-top: 0.8rem;
     margin-right: 1rem ;
 }
 
 #iconlupa{
-    margin-top: 0.8rem;
     margin-right: 1rem;
 }
 
+#searchbar{
+    width: 27rem;
+    height: 3.5rem;
+}
+
+#iconx{
+    display: none;
+    margin-right: 1rem;
+    width: 24px;
+    height: 24px;
+}

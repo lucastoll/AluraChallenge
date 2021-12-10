@@ -10,17 +10,52 @@
     <link rel="stylesheet" href="css/textblock.css">
     <link rel="stylesheet" href="css/seuprojeto.css">
     <link rel="stylesheet" href="css/personalizacao.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
     <div id="container">
         <header>
-            <img src="/img/logo.png" alt="Logo AluraDev" class="cabecalho__logo">
+            <img src="/img/logo.png" alt="Logo AluraDev" id="logo">
+            <input placeholder="Busque por algo" class="formulario" id="searchbar" type="text">
             <div>
             <img src="img/lupa.png"  id="iconlupa">
-            <img src="img/3bars.png" id="iconmenu">
+            <img src="img/3bars.png" id="iconmenu" onclick="openSideMenu()">
+            <img src="/img/x.svg" alt="Fechar menu lateral" id="iconx" onclick="closeSideMenu()">
             </div>
         </header>
-        <main>
+            <nav class="side-nav" id="side-menu">
+                <div class="nav-content" id="navcontent">
+                    <ul>
+                        <li>
+                            <a href="#" title="Editor de código"> 
+                                <div class="nav__divs">
+                                    <img src="/img/editor.svg" class="nav__img" alt="">
+                                    <p>Editor de código</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Editor de código">
+                                <div class="nav__divs">
+                                    <img src="/img/comunidade.svg" class="nav__img" alt="">
+                                    <p>Comunidade</p>
+                                </div>
+                            </a>
+                        </li>
+                        <div class="nav__line"></div>
+                        <li>
+                            <a href="#" title="Perfil"> 
+                                <div class="nav__divs">
+                                    <img class="nav__pp" src="/img/pp.PNG" alt="Sua foto de perfil">
+                                    <p>Lucas</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main>
             <div id="rgbcontainer">
                 <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
                 <textarea name="codigo" cols="10" rows="17" placeholder="Digite o código."></textarea> 

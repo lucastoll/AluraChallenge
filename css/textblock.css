@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #6BD1FF;
-    max-width: 688px;
+    max-width: calc(1024px - 64px);
     grid-area: textblock;
     padding: 2rem;
     margin: 0 auto;
@@ -59,12 +59,12 @@ textarea:focus {
 }
 
 #buttonhighlight {
-    background: #5081FB14;
+    background: #5080fb2d;
     border-radius: 0.5rem;
     margin: 2rem auto;
     height: 3.5rem;
     width: 100%;
-    max-width: 752px;
+    max-width: 1024px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 24px;

@@ -1,0 +1,89 @@
+nav{
+    overflow: hidden;
+}
+
+.side-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.nav-content{
+    background: #142942;
+    height: 123vh;
+    position: absolute;
+    margin-top: 1rem;
+    transition: 0.5s;
+    width: 0px;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 767px){
+    .nav-content{
+        background: #2D415B;
+    }
+}
+
+.nav-content ul li a{
+    text-decoration: none;
+}
+
+.nav-content ul li a:link {
+  color: white;
+}
+
+.nav-content ul li a:visited {
+  color: white;
+}
+
+.nav-content ul li a:hover {
+  color: white;
+}
+
+.nav-content ul li a:active {
+  color: white;
+}
+
+.nav-content ul{
+    list-style: none;
+}
+
+.nav-content ul li a div p{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    align-self: center;
+    height: 20px;
+    overflow: hidden;
+}
+
+.nav__divs{
+    display: flex; 
+    align-items: center;
+    margin: 1rem 2.5rem 0rem 1.5rem;
+}
+
+.nav__img{
+    margin-right: 1rem;
+}
+
+.nav__line{
+    background: white;
+    width: 80%;
+    height: 2px;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.08;
+    border-radius: 2px;
+}
+
+.nav__pp{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
