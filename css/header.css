@@ -1,12 +1,10 @@
 header{
-    grid-area: header;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    max-width: 1024px;
     margin-top: 1rem;
 }
 
@@ -22,6 +20,7 @@ header{
 
 #iconmenu{
     margin-right: 1rem ;
+    display: inline;
 }
 
 #iconlupa{
@@ -29,7 +28,7 @@ header{
 }
 
 #searchbar{
-    width: 27rem;
+    width: 26.95rem;
     height: 3.5rem;
 }
 
@@ -38,4 +37,59 @@ header{
     margin-right: 1rem;
     width: 24px;
     height: 24px;
+}
+
+.fotodesktop{
+    display: none; 
+    align-items: center;
+    margin: 1rem 2.5rem 0rem 1.5rem;
+    color: white;
+    font-family: Inter;
+    font-size: 16px;
+}
+
+.fotodesktop img{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    #iconmenu{
+        margin-right: 2rem ;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    #div1{
+        width: 25%;
+    }
+    
+    #div2{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #div3{
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    #searchbar{
+        width: calc(100% - 4.5rem);
+        max-width: 1010px;
+    }
+    
+
+    #iconmenu{
+        display: none;
+    }
+
+    .fotodesktop{
+        display: flex;
+    }
 }

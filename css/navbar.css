@@ -20,6 +20,7 @@ nav{
     overflow: hidden;
 }
 
+
 @media screen and (min-width: 767px){
     .nav-content{
         background: #2D415B;

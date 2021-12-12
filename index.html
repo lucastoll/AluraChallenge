@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,22 +13,35 @@
     <link rel="stylesheet" href="css/personalizacao.css">
     <link rel="stylesheet" href="css/navbar.css">
 </head>
+
 <body>
     <div id="container">
-        <header>
+        <header> <!-- Grid area -->
+            <div id="div1">
             <img src="/img/logo.png" alt="Logo AluraDev" id="logo">
+            </div>
+
+            <div id="div2">
             <input placeholder="Busque por algo" class="formulario" id="searchbar" type="text">
-            <div>
-            <img src="img/lupa.png"  id="iconlupa">
-            <img src="img/3bars.png" id="iconmenu" onclick="openSideMenu()">
-            <img src="/img/x.svg" alt="Fechar menu lateral" id="iconx" onclick="closeSideMenu()">
+            </div>
+
+            <div id="div3">
+                <img src="img/lupa.png" id="iconlupa">
+                <img src="img/3bars.png" id="iconmenu" onclick="openSideMenu()">
+                <img src="/img/x.svg" alt="Fechar menu lateral" id="iconx" onclick="closeSideMenu()">
+                <div class="fotodesktop">
+                    <img src="/img/pp.PNG" alt="Sua foto de perfil">
+                    <p>Lucas</p>
+                </div>
             </div>
         </header>
+
+        <div class="textblock"> <!-- Grid area -->
             <nav class="side-nav" id="side-menu">
                 <div class="nav-content" id="navcontent">
                     <ul>
                         <li>
-                            <a href="#" title="Editor de código"> 
+                            <a href="#" title="Editor de código">
                                 <div class="nav__divs">
                                     <img src="/img/editor.svg" class="nav__img" alt="">
                                     <p>Editor de código</p>
@@ -44,7 +58,7 @@
                         </li>
                         <div class="nav__line"></div>
                         <li>
-                            <a href="#" title="Perfil"> 
+                            <a href="#" title="Perfil">
                                 <div class="nav__divs">
                                     <img class="nav__pp" src="/img/pp.PNG" alt="Sua foto de perfil">
                                     <p>Lucas</p>
@@ -55,39 +69,48 @@
                 </div>
             </nav>
 
-            <main>
-            <div id="rgbcontainer">
-                <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
-                <textarea name="codigo" cols="10" rows="17" placeholder="Digite o código."></textarea> 
+
+
+
+            <div class="padding">
+                <div id="rgbcontainer">
+                    <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
+                    <textarea name="codigo" cols="10" rows="17" placeholder="Digite o código."></textarea>
+                </div>
+
+                <div class="alinhamento">
+                    <button id="buttonhighlight">Visualizar com o highlight</button>
+                </div>
             </div>
+        </div>
+                <div class="grupo">
+                    <div class="seuprojeto padding"> <!-- Grid area -->
+                        <div id="seuprojeto">
+                            <label for="projeto">Seu projeto</label>
+                            <input type="text" id="projeto" placeholder="Nome do seu projeto" class="formulario">
+                            <input type="text" placeholder="Descrição do seu projeto" class="formulario">
+                        </div>
+                    </div>
 
-            <div class="alinhamento">
-            <button id="buttonhighlight">Visualizar com o highlight</button>    
-            </div>
+                    <div class="personalizacao padding"> <!-- Grid area -->
+                        <div id="personalizacao">
+                            <label for="linguagem">Personalização</label>
 
-            <div id="seuprojeto">
-                <label for="projeto">Seu projeto</label>
-                <input type="text" id="projeto" placeholder="Nome do seu projeto" class="formulario">
-                <input type="text" placeholder="Descrição do seu projeto" class="formulario">
-            </div>
+                            <div id="selectcor">
+                                <select id="linguagem">
+                                    <option class="formulario">JavaScript</option>
+                                    <option class="formulario">Python</option>
+                                </select>
+                                <input type="color" id="cor">
+                            </div>
+                    
 
-            <div id="personalizacao">
-                <label for="linguagem">Personalização</label>
-                
-            <div id="selectcor">
-                <select id="linguagem">
-                    <option class="formulario">JavaScript</option>
-                    <option class="formulario">Python</option>
-                </select>
-                <input type="color" id="cor">
-            </div>
-
-
-                <input type="submit" id="salvarprojeto" value="Salvar projeto">
-            </div>
-        </main>
-    </div>
-
+                            <input type="submit" id="salvarprojeto" value="Salvar projeto">
+                        </div>
+                    </div>
+                </div>
+''    </div>
 </body>
 <script src="myscript.js"></script>
+
 </html>
