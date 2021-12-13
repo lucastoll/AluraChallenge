@@ -70,3 +70,7 @@ textarea:focus {
     color: white;
     border: none;
 }
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}

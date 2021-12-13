@@ -1,0 +1,20 @@
+.nav-content-desktop{
+    grid-column: 1/2;
+    grid-row: 2;
+    margin-left: 28px;
+    max-width: 25vw;
+    display: none;
+}
+
+.nav_div_desktop{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-content-desktop{
+        display: block;
+    }
+}
+

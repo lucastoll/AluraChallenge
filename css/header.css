@@ -12,12 +12,6 @@ header{
     margin-left: 0.5rem;
 }
 
-@media screen and (min-width: 767px) {
-    #logo{
-        height: 4rem;
-    }
-}
-
 #iconmenu{
     margin-right: 1rem ;
     display: inline;
@@ -25,6 +19,7 @@ header{
 
 #iconlupa{
     margin-right: 1rem;
+    display: inline;
 }
 
 #searchbar{
@@ -55,14 +50,48 @@ header{
     margin-right: 0.5rem;
 }
 
+@media screen and (max-width: 767px) {
+    #iconlupa{
+        display: inline;
+    }
+
+    #searchbar{
+        display: none;
+    }
+}
+
 @media screen and (min-width: 768px) {
     #iconmenu{
-        margin-right: 2rem ;
+        margin-right: 2rem;
+    }
+
+    #iconx{
+        margin-right: 2rem;
+    }
+
+    #logo{
+        height: 4rem;
+    }
+
+    #iconlupa{
+        display: none;
+    }
+
+    #searchbar{
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    #iconmenu{
+        width: 24px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    
+    #iconmenu{
+        width: 0;
+    }
     #div1{
         width: 25%;
     }
@@ -80,14 +109,10 @@ header{
     }
     
     #searchbar{
-        width: calc(100% - 4.5rem);
+        width: calc(100% - 4.6rem);
         max-width: 1010px;
     }
-    
 
-    #iconmenu{
-        display: none;
-    }
 
     .fotodesktop{
         display: flex;

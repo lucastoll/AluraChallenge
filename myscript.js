@@ -4,16 +4,12 @@ const tabletQuery = window.matchMedia('(min-width: 767px)');
 function mobiletablet(e){
   let contpersonalizacao = document.getElementById("selectcor"); 
   let inputcor = document.getElementById("cor");
-  let iconlupa = document.getElementById("iconlupa");
-  let searchbar = document.getElementById("searchbar");
 
 
   if (e.matches) {
   contpersonalizacao.style.display = "flex";
   contpersonalizacao.style.gap = "1rem";
   inputcor.style.margin = "0";
-  iconlupa.style.display = "none";
-  searchbar.style.display = "inline";
   }
 }
 
@@ -27,16 +23,12 @@ const mobileQuery = window.matchMedia('(max-width: 767px)');
 function tabletmobile(e){
   let contpersonalizacao = document.getElementById("selectcor"); 
   let inputcor = document.getElementById("cor");
-  let iconlupa = document.getElementById("iconlupa");
-  let searchbar = document.getElementById("searchbar");
 
 
   if (e.matches) {
   contpersonalizacao.style.display = "block";
   contpersonalizacao.style.gap = "0px";
   inputcor.style.margin = "1rem 0px 0px 0px";
-  iconlupa.style.display = "inline";
-  searchbar.style.display = "none";
   }
 }
 
@@ -81,12 +73,10 @@ function tabletdesktop(e){
   if (e.matches) {
     let contpersonalizacao = document.getElementById("selectcor"); 
     let inputcor = document.getElementById("cor");
-    let iconmenu = document.getElementById("iconmenu");
 
     contpersonalizacao.style.display = "block";
     contpersonalizacao.style.gap = "0px";
     inputcor.style.margin = "1rem 0px 0px 0px";
-    iconmenu.style.display = "none";
 
     if(statusnavbar == 1){ /* Previnir que a navbar esteja fechada quando a width ultrapassa 1024pxs */
       statusnavbar = 2;

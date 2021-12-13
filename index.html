@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/seuprojeto.css">
     <link rel="stylesheet" href="css/personalizacao.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/navbar_desktop.css">
+
 </head>
 
 <body>
@@ -29,14 +31,43 @@
                 <img src="img/lupa.png" id="iconlupa">
                 <img src="img/3bars.png" id="iconmenu" onclick="openSideMenu()">
                 <img src="/img/x.svg" alt="Fechar menu lateral" id="iconx" onclick="closeSideMenu()">
+                <a href="https://github.com/lucastoll" target="_blank">
                 <div class="fotodesktop">
                     <img src="/img/pp.PNG" alt="Sua foto de perfil">
                     <p>Lucas</p>
                 </div>
+                </a>
             </div>
         </header>
 
+
+        <nav class="side-nav-desktop">
+            <div class="nav-content-desktop">
+                <ul>
+                    <label>Menu</label>
+                    <li>
+                        <a href="#" title="Editor de código">
+                            <div class="nav_div_desktop">
+                                <img src="/img/editor.svg" class="nav__img" alt="">
+                                <p>Editor de código</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="comunidade.html" title="Comunidade">
+                            <div class="nav_div_desktop">
+                                <img src="/img/comunidade.svg" class="nav__img" alt="">
+                                <p style="opacity: 0.56;">Comunidade</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
         <div class="textblock"> <!-- Grid area -->
+            
             <nav class="side-nav" id="side-menu">
                 <div class="nav-content" id="navcontent">
                     <ul>
@@ -49,16 +80,16 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" title="Editor de código">
+                            <a href="comunidade.html" title="Comunidade">
                                 <div class="nav__divs">
                                     <img src="/img/comunidade.svg" class="nav__img" alt="">
-                                    <p>Comunidade</p>
+                                    <p style="opacity: 0.56;">Comunidade</p>
                                 </div>
                             </a>
                         </li>
                         <div class="nav__line"></div>
                         <li>
-                            <a href="#" title="Perfil">
+                            <a href="https://github.com/lucastoll" title="Perfil" target="_blank">
                                 <div class="nav__divs">
                                     <img class="nav__pp" src="/img/pp.PNG" alt="Sua foto de perfil">
                                     <p>Lucas</p>
@@ -87,7 +118,7 @@
                     <div class="seuprojeto padding"> <!-- Grid area -->
                         <div id="seuprojeto">
                             <label for="projeto">Seu projeto</label>
-                            <input type="text" id="projeto" placeholder="Nome do seu projeto" class="formulario">
+                            <input type="text" id="projeto" placeholder="Nome do seu projeto" class="formulario" rows="2">
                             <input type="text" placeholder="Descrição do seu projeto" class="formulario">
                         </div>
                     </div>
@@ -109,8 +140,7 @@
                         </div>
                     </div>
                 </div>
-''    </div>
+        </div>
 </body>
 <script src="myscript.js"></script>
-
 </html>
