@@ -51,6 +51,12 @@ ul{
     list-style: none;
 }
 
+.espacohover{
+    padding: 12px;
+    display: flex;
+    border-radius: 8px;
+}
+
 .nav-content ul li a div p{
     font-family: Inter;
     font-style: normal;

@@ -13,23 +13,31 @@ header{
 }
 
 #iconmenu{
-    margin-right: 1rem ;
     display: inline;
+    width: 24px;
+    height: 24px;
 }
 
 #iconlupa{
-    margin-right: 1rem;
     display: inline;
+    width: 24px;
+    height: 24px;
+}
+
+#div2{
+    width: 80%;
+    display: flex;
+    justify-content: center;
 }
 
 #searchbar{
-    width: 26.95rem;
+    width: 80%;
     height: 3.5rem;
+    font-size: 12px;
 }
 
 #iconx{
     display: none;
-    margin-right: 1rem;
     width: 24px;
     height: 24px;
 }
@@ -37,10 +45,16 @@ header{
 .fotodesktop{
     display: none; 
     align-items: center;
-    margin: 1rem 2.5rem 0rem 1.5rem;
+    margin: 1rem 1.5rem 0rem 1.5rem;
+    padding: 12px;
     color: white;
     font-family: Inter;
     font-size: 16px;
+    border-radius: 8px;
+}
+
+.profile:hover{
+    background: #192F4A;
 }
 
 .fotodesktop img{
@@ -48,6 +62,36 @@ header{
     width: 2rem;
     height: 2rem;
     margin-right: 0.5rem;
+}
+
+#div3{
+    display: flex;
+}
+
+.headerhover{
+    display: flex;
+    padding: 8px 8px;
+    border-radius: 8px;
+}
+
+.headerhover:hover{
+    background: #0B254A;
+}
+
+.headerhover:active{
+    background: #112D5A;
+}
+
+.hhmenu{
+    margin-right: 8px;
+}
+
+.hhlupa{
+    margin-right: 16px;
+}
+
+.hhx{
+    margin-right: 8px;
 }
 
 @media screen and (max-width: 767px) {
@@ -61,45 +105,61 @@ header{
 }
 
 @media screen and (min-width: 768px) {
-    #iconmenu{
-        margin-right: 2rem;
-    }
 
-    #iconx{
-        margin-right: 2rem;
+    #div2{
+        width: 50%;
     }
 
     #logo{
         height: 4rem;
     }
 
-    #iconlupa{
+    #hhlupa{
         display: none;
     }
 
     #searchbar{
         display: inline;
+        width: 26.95rem;
+        font-size: 16px;
     }
-}
 
-@media screen and (max-width: 1024px){
+    .hhmenu{
+        margin-right: 24px;
+    }
+
+    #iconx{
+        display: none;
+    }
+    
+    .hhx{
+        margin-right: 24px;
+    }
+
+    .hhlupa{
+        display: none;
+    }
+
+    #logo{
+        margin-left: 20px;
+    }
+
     #iconmenu{
         width: 24px;
     }
+    
 }
 
 @media screen and (min-width: 1024px) {
+    #logo{
+        margin-left: 10px;
+    }
+
     #iconmenu{
         width: 0;
     }
     #div1{
         width: 25%;
-    }
-    
-    #div2{
-        width: 50%;
-        display: flex;
-        justify-content: center;
     }
     
     #div3{

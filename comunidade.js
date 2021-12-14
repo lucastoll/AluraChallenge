@@ -8,14 +8,15 @@ function openSideMenu(){
     let iconmenu = document.getElementById("iconmenu");
     let iconx = document.getElementById("iconx");
     let sidemenu = document.getElementById("navcontent");
-    let sidenav = document.getElementById("side-menu");
+    let hhmenu = document.getElementById("divmenu");
+    let hhx = document.getElementById("divx");
 
     statusnavbar = 1;
-  
+    hhmenu.style.display = "none";
+    hhx.style.display = "inline";
     iconmenu.style.display = "none";
     iconx.style.display = "inline";
     sidemenu.style.width = '253px';
-    sidenav.style.width = 'auto';
   }
 }
 
@@ -25,15 +26,48 @@ function closeSideMenu(){
     let iconmenu = document.getElementById("iconmenu");
     let iconx = document.getElementById("iconx");
     let sidemenu = document.getElementById("navcontent");
-    let sidenav = document.getElementById("side-menu");
-
+    let hhmenu = document.getElementById("divmenu");
+    let hhx = document.getElementById("divx");
     statusnavbar = 0;
-    sidenav.style.width = '0';
+
+    hhmenu.style.display = "inline";
+    hhx.style.display = "none";
     iconmenu.style.display = "inline";
     iconx.style.display = "none";
     sidemenu.style.width = '0';
   }
 }
+
+/* Lupa / searchbar */
+
+var statuslupa = 0;
+
+function openlupa(){
+  if(window.innerWidth <= 767)
+  {
+    if(statuslupa == 0)
+    {
+      let iconlupa = document.getElementById("divlupa");
+      let searchbar = document.getElementById("searchbar");
+      statuslupa = 1;
+    
+    
+      iconlupa.style.display = 'none';
+      searchbar.style.display = 'inline';
+    }
+    else
+    {
+      let iconlupa = document.getElementById("divlupa");
+      let searchbar = document.getElementById("searchbar");
+      statuslupa = 0;
+    
+    
+      iconlupa.style.display = 'inline';
+      searchbar.style.display = 'none';
+    }
+  }
+}
+
 
 const desktopQuery = window.matchMedia('(min-width: 1025px)');
 

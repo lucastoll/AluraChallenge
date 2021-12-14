@@ -19,9 +19,6 @@
     color: #FFFFFF;
   }
 
-#seuprojeto input:focus{
-    background: #41536A;
-}
 
 #seuprojeto input:nth-child(2){
     height: 3.5rem;
@@ -41,15 +38,3 @@ label{
     text-transform: uppercase;
 }
 
-
-@media screen and (min-width: 1024px) {
-    .formulario{
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .formulario{
-        font-size: 16px;
-    }
-}

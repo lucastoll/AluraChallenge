@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/alura.ico">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/textblock.css">
@@ -18,7 +19,7 @@
     <div id="container">
         <header> <!-- Grid area -->
             <div id="div1">
-            <img src="/img/logo.png" alt="Logo AluraDev" id="logo">
+            <img src="img/logo.png" alt="Logo AluraDev" id="logo">
             </div>
 
             <div id="div2">
@@ -26,14 +27,24 @@
             </div>
 
             <div id="div3">
-                <img src="img/lupa.png" id="iconlupa">
-                <img src="img/3bars.png" id="iconmenu" onclick="openSideMenu()">
-                <img src="/img/x.svg" alt="Fechar menu lateral" id="iconx" onclick="closeSideMenu()">
+
+                <div class="headerhover hhlupa" id="divlupa" onclick="openlupa()">
+                    <img src="img/lupa.png" id="iconlupa">
+                </div>
+
+                <div class="headerhover hhmenu" id="divmenu">
+                    <img src="img/3bars.png" id="iconmenu" onclick="openSideMenu()">
+                </div>
+
+                <div class="headerhover hhx" id="divx" style="display: none;">
+                    <img src="img/x.svg" alt="Fechar menu lateral" id="iconx" onclick="closeSideMenu()">
+                </div>
+
                 <a href="https://github.com/lucastoll" target="_blank">
-                    <div class="fotodesktop">
-                        <img src="/img/pp.PNG" alt="Sua foto de perfil">
-                        <p>Lucas</p>
-                    </div>
+                <div class="fotodesktop profile">
+                    <img src="img/pp.PNG" alt="Sua foto de perfil">
+                    <p>Lucas</p>
+                </div>
                 </a>
             </div>
         </header>
@@ -45,7 +56,7 @@
                     <li>
                         <a href="index.html" title="Editor de código">
                             <div class="nav_div_desktop">
-                                <img src="/img/editor2.svg" class="nav__img" alt="">
+                                <img src="img/editor2.svg" class="nav__img" alt="">
                                 <p style="opacity: 0.56;">Editor de código</p>
                             </div>
                         </a>
@@ -53,7 +64,7 @@
                     <li>
                         <a href="#" title="Comunidade">
                             <div class="nav_div_desktop">
-                                <img src="/img/comunidade2.svg" class="nav__img" alt="">
+                                <img src="img/comunidade2.svg" class="nav__img" alt="">
                                 <p>Comunidade</p>
                             </div>
                         </a>
@@ -69,7 +80,7 @@
                     <li>
                         <a href="index.html" title="Editor de código">
                             <div class="nav__divs">
-                                <img src="/img/editor2.svg" class="nav__img" alt="">
+                                <img src="img/editor2.svg" class="nav__img" alt="">
                                 <p style="opacity: 0.56;">Editor de código</p>
                             </div>
                         </a>
@@ -77,7 +88,7 @@
                     <li>
                         <a href="#" title="Comunidade">
                             <div class="nav__divs">
-                                <img src="/img/comunidade2.svg" class="nav__img" alt="">
+                                <img src="img/comunidade2.svg" class="nav__img" alt="">
                                 <p>Comunidade</p>
                             </div>
                         </a>
@@ -86,8 +97,10 @@
                     <li>
                         <a href="https://github.com/lucastoll" title="Perfil">
                             <div class="nav__divs">
-                                <img class="nav__pp" src="/img/pp.PNG" alt="Sua foto de perfil">
-                                <p>Lucas</p>
+                                <div class="espacohover profile">
+                                    <img class="nav__pp" src="img/pp.PNG" alt="Sua foto de perfil">
+                                    <p>Lucas</p>
+                                </div>
                             </div>
                         </a>
                     </li>
@@ -106,11 +119,11 @@
                 <p>Digite um CPF que o pai fala se é valido ou não.</p>
                 <div class="info_div">
                     <div class="info_social">
-                        <img src="/img/comentario.svg" alt=""> <p>5</p>
-                        <img src="/img/likes.svg" alt=""> <p>9</p>
+                        <img src="img/comentario.svg" alt=""> <p>5</p>
+                        <img src="img/likes.svg" alt=""> <p>9</p>
                     </div>
                     <div class="info_profile">
-                        <img src="/img/pp.PNG" alt="Foto de perfil do usuário">
+                        <img src="img/pp.PNG" alt="Foto de perfil do usuário">
                         <p>@Lucas</p>
                     </div>
                 </div>
@@ -127,11 +140,11 @@
                 <p>Donate pro gaules</p>
                 <div class="info_div">
                     <div class="info_social">
-                        <img src="/img/comentario.svg" alt=""> <p>4</p>
-                        <img src="/img/likes.svg" alt=""> <p>1</p>
+                        <img src="img/comentario.svg" alt=""> <p>4</p>
+                        <img src="img/likes.svg" alt=""> <p>1</p>
                     </div>
                     <div class="info_profile">
-                        <img src="/img/comunidade/gaules.jpg" alt="Foto de perfil do usuário">
+                        <img src="img/comunidade/gaules.jpg" alt="Foto de perfil do usuário">
                         <p>@gaules</p>
                     </div>
                 </div>
@@ -148,11 +161,11 @@
                 <p>Printa a letra de sorriso ronaldo.</p>
                 <div class="info_div">
                     <div class="info_social">
-                        <img src="/img/comentario.svg" alt=""> <p>2</p>
-                        <img src="/img/likes.svg" alt=""> <p>2130</p>
+                        <img src="img/comentario.svg" alt=""> <p>2</p>
+                        <img src="img/likes.svg" alt=""> <p>2130</p>
                     </div>
                     <div class="info_profile">
-                        <img src="/img/comunidade/tody.jpeg" alt="Foto de perfil do usuário">
+                        <img src="img/comunidade/tody.jpeg" alt="Foto de perfil do usuário">
                         <p>@Tody</p>
                     </div>
                 </div>
@@ -169,11 +182,11 @@
                 <p>Bololo Veinho - MCs Ryan SP, Davi, Kelvinho (GR6 Explode)</p>
                 <div class="info_div">
                     <div class="info_social">
-                        <img src="/img/comentario.svg" alt=""> <p>0</p>
-                        <img src="/img/likes.svg" alt=""> <p>-2</p>
+                        <img src="img/comentario.svg" alt=""> <p>0</p>
+                        <img src="img/likes.svg" alt=""> <p>-2</p>
                     </div>
                     <div class="info_profile">
-                        <img src="/img/comunidade/colomibni.jpeg" alt="Foto de perfil do usuário">
+                        <img src="img/comunidade/colomibni.jpeg" alt="Foto de perfil do usuário">
                         <p>@colombini</p>
                     </div>
                 </div>
@@ -183,7 +196,7 @@
 
     </div>
 
-
+    <div id="chupeta"></div>
 
 </body>
 <script src="comunidade.js"></script>

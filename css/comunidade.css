@@ -70,6 +70,14 @@
     padding: 1rem 2rem;
 }
 
+.hhmenu{
+    margin-right: 24px;
+}
+
+.hhx{
+    margin-right: 24px;
+    max-height: 40px;
+}
 
 @media screen and (min-width: 1024px) {
     #container{

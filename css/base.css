@@ -29,6 +29,15 @@ body{
     outline: none;
 }
 
+.formulario:hover{
+    background: #41536A;
+}
+
+.formulario:focus{
+    background: #41536A;
+}
+
+
 .alinhamento{
     display: flex;
     justify-content: center;
@@ -97,6 +106,13 @@ header{
         max-width: 25vw;
     }
 
-
+    .formulario{
+        font-size: 14px;
+    }
 }
 
+@media screen and (min-width: 1200px) {
+    .formulario{
+        font-size: 16px;
+    }
+}

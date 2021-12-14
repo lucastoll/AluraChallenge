@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/alura.ico">
     <title>AluraDev</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
@@ -20,7 +21,7 @@
     <div id="container">
         <header> <!-- Grid area -->
             <div id="div1">
-            <img src="/img/logo.png" alt="Logo AluraDev" id="logo">
+            <img src="img/logo.png" alt="Logo AluraDev" id="logo">
             </div>
 
             <div id="div2">
@@ -28,12 +29,22 @@
             </div>
 
             <div id="div3">
-                <img src="img/lupa.png" id="iconlupa">
-                <img src="img/3bars.png" id="iconmenu" onclick="openSideMenu()">
-                <img src="/img/x.svg" alt="Fechar menu lateral" id="iconx" onclick="closeSideMenu()">
+
+                <div class="headerhover hhlupa" id="divlupa" onclick="openlupa()">
+                    <img src="img/lupa.png" id="iconlupa">
+                </div>
+
+                <div class="headerhover hhmenu" id="divmenu">
+                    <img src="img/3bars.png" id="iconmenu" onclick="openSideMenu()">
+                </div>
+
+                <div class="headerhover hhx" id="divx" style="display: none;">
+                    <img src="img/x.svg" alt="Fechar menu lateral" id="iconx" onclick="closeSideMenu()">
+                </div>
+
                 <a href="https://github.com/lucastoll" target="_blank">
-                <div class="fotodesktop">
-                    <img src="/img/pp.PNG" alt="Sua foto de perfil">
+                <div class="fotodesktop profile">
+                    <img src="img/pp.PNG" alt="Sua foto de perfil">
                     <p>Lucas</p>
                 </div>
                 </a>
@@ -48,7 +59,7 @@
                     <li>
                         <a href="#" title="Editor de código">
                             <div class="nav_div_desktop">
-                                <img src="/img/editor.svg" class="nav__img" alt="">
+                                <img src="img/editor.svg" class="nav__img" alt="">
                                 <p>Editor de código</p>
                             </div>
                         </a>
@@ -56,7 +67,7 @@
                     <li>
                         <a href="comunidade.html" title="Comunidade">
                             <div class="nav_div_desktop">
-                                <img src="/img/comunidade.svg" class="nav__img" alt="">
+                                <img src="img/comunidade.svg" class="nav__img" alt="">
                                 <p style="opacity: 0.56;">Comunidade</p>
                             </div>
                         </a>
@@ -74,7 +85,7 @@
                         <li>
                             <a href="#" title="Editor de código">
                                 <div class="nav__divs">
-                                    <img src="/img/editor.svg" class="nav__img" alt="">
+                                    <img src="img/editor.svg" class="nav__img" alt="">
                                     <p>Editor de código</p>
                                 </div>
                             </a>
@@ -82,7 +93,7 @@
                         <li>
                             <a href="comunidade.html" title="Comunidade">
                                 <div class="nav__divs">
-                                    <img src="/img/comunidade.svg" class="nav__img" alt="">
+                                    <img src="img/comunidade.svg" class="nav__img" alt="">
                                     <p style="opacity: 0.56;">Comunidade</p>
                                 </div>
                             </a>
@@ -90,17 +101,17 @@
                         <div class="nav__line"></div>
                         <li>
                             <a href="https://github.com/lucastoll" title="Perfil" target="_blank">
-                                <div class="nav__divs">
-                                    <img class="nav__pp" src="/img/pp.PNG" alt="Sua foto de perfil">
+                                <div class="nav__divs profile">
+                                    <div class="espacohover profile">
+                                    <img class="nav__pp" src="img/pp.PNG" alt="Sua foto de perfil">
                                     <p>Lucas</p>
+                                    </div>
                                 </div>
                             </a>
                         </li>
                     </ul>
                 </div>
             </nav>
-
-
 
 
             <div class="padding">
