@@ -15,7 +15,13 @@
     padding: 1.5rem 1.5rem 2rem 1.5rem;
     background-color: #041832;
     border-radius: 0rem 0rem 0.5rem 0.5rem;
-    max-height: 105px;
+    max-height: 120px;
+}
+
+@media screen and (min-width: 1220px){
+    .info_projeto{
+        max-height: 100px;
+    }
 }
 
 .info_projeto h2{
@@ -37,14 +43,12 @@
     margin-top: 2rem;
 }
 
-.info_social p{
-    margin-right: 0.5rem;
-}
-
 .info_profile{
     display: flex;
+    align-self: flex-end;
     align-items: flex-end;
     gap: 0.5rem;
+    max-height: 32px;
 }
 
 .info_profile img{
@@ -77,6 +81,17 @@
 .hhx{
     margin-right: 24px;
     max-height: 40px;
+}
+
+.comunidadeiconhover{
+    display: flex;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 8px;
+}
+
+.comunidadeiconhover:hover{
+    background: #0B254A;
 }
 
 @media screen and (min-width: 1024px) {
@@ -141,3 +156,5 @@
         margin-bottom: 2rem;
     }
 }
+
+

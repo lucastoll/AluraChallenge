@@ -11,20 +11,13 @@ nav{
 }
 
 .nav-content{
-    background: #142942;
+    background: #2D415B;
     height: 126vh;
     position: absolute;
     margin-top: 1rem;
     transition: 0.5s;
     width: 0px;
     overflow: hidden;
-}
-
-
-@media screen and (min-width: 767px){
-    .nav-content{
-        background: #2D415B;
-    }
 }
 
 a{
@@ -61,7 +54,7 @@ ul{
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 15px;
     align-self: center;
     height: 20px;
     overflow: hidden;
@@ -71,6 +64,8 @@ ul{
     display: flex; 
     align-items: center;
     margin: 1rem 2.5rem 0rem 1.5rem;
+    border-radius: 8px;
+    padding: 4px;
 }
 
 .nav__img{

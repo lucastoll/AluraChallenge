@@ -66,9 +66,9 @@
                     </li>
                     <li>
                         <a href="comunidade.html" title="Comunidade">
-                            <div class="nav_div_desktop">
-                                <img src="img/comunidade.svg" class="nav__img" alt="">
-                                <p style="opacity: 0.56;">Comunidade</p>
+                            <div class="nav_div_desktop" id="div_desktop_comunidade">
+                                <img src="img/comunidade.svg" class="nav__img" id="img_desktop_comunidade" alt="">
+                                <p style="opacity: 0.56;" id="p_desktop_comunidade">Comunidade</p>
                             </div>
                         </a>
                     </li>
@@ -92,9 +92,9 @@
                         </li>
                         <li>
                             <a href="comunidade.html" title="Comunidade">
-                                <div class="nav__divs">
-                                    <img src="img/comunidade.svg" class="nav__img" alt="">
-                                    <p style="opacity: 0.56;">Comunidade</p>
+                                <div class="nav__divs" id="nav_div_mobile">
+                                    <img src="img/comunidade.svg" class="nav__img" id="nav_img_mobile" alt="">
+                                    <p style="opacity: 0.56;" id="nav_p_mobile">Comunidade</p>
                                 </div>
                             </a>
                         </li>
@@ -130,20 +130,21 @@
                         <div id="seuprojeto">
                             <label for="projeto">Seu projeto</label>
                             <input type="text" id="projeto" placeholder="Nome do seu projeto" class="formulario" rows="2">
-                            <input type="text" placeholder="Descrição do seu projeto" class="formulario">
+                            <input type="text" placeholder="Descrição do seu projeto" class="formulario" maxlength="40">
                         </div>
                     </div>
 
-                    <div class="personalizacao padding"> <!-- Grid area -->
+                    <div class="personalizacao"> <!-- Grid area -->
                         <div id="personalizacao">
                             <label for="linguagem">Personalização</label>
 
                             <div id="selectcor">
                                 <select id="linguagem">
-                                    <option class="formulario">JavaScript</option>
-                                    <option class="formulario">Python</option>
+                                    <option selected disabled>Selecione</option>
+                                    <option>JavaScript</option>
+                                    <option>Python</option>
                                 </select>
-                                <input type="color" id="cor">
+                                <input type="color" id="cor" value="#6BD1FF">
                             </div>
                     
 
@@ -153,5 +154,5 @@
                 </div>
         </div>
 </body>
-<script src="myscript.js"></script>
+<script src="js/myscript.js"></script>
 </html>

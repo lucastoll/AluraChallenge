@@ -10,6 +10,17 @@
     display: flex;
     align-items: center;
     margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.nav_div_desktop p{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.nav_div_desktop:hover{
+    background: #192F4A;
 }
 
 @media screen and (min-width: 1024px) {

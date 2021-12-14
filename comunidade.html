@@ -55,9 +55,9 @@
                     <label>Menu</label>
                     <li>
                         <a href="index.html" title="Editor de código">
-                            <div class="nav_div_desktop">
-                                <img src="img/editor2.svg" class="nav__img" alt="">
-                                <p style="opacity: 0.56;">Editor de código</p>
+                            <div class="nav_div_desktop" id="div_desktop_editor">
+                                <img src="img/editor2.svg" class="nav__img" id="img_desktop_editor" alt="">
+                                <p style="opacity: 0.56;" id="p_desktop_editor">Editor de código</p>
                             </div>
                         </a>
                     </li>
@@ -79,9 +79,9 @@
                 <ul>
                     <li>
                         <a href="index.html" title="Editor de código">
-                            <div class="nav__divs">
-                                <img src="img/editor2.svg" class="nav__img" alt="">
-                                <p style="opacity: 0.56;">Editor de código</p>
+                            <div class="nav__divs" id="nav_div_mobile">
+                                <img src="img/editor2.svg" id="nav_img_mobile" class="nav__img" alt="">
+                                <p style="opacity: 0.56;" id="nav_p_mobile">Editor de código</p>
                             </div>
                         </a>
                     </li>
@@ -119,10 +119,17 @@
                 <p>Digite um CPF que o pai fala se é valido ou não.</p>
                 <div class="info_div">
                     <div class="info_social">
+                        
+                        <div class="comunidadeiconhover">
                         <img src="img/comentario.svg" alt=""> <p>5</p>
-                        <img src="img/likes.svg" alt=""> <p>9</p>
+                        </div>
+
+                        <div class="comunidadeiconhover" onclick="functionlike(this);">
+                        <img src="img/likes.svg" alt=""> <p id="like1">9</p>
+                        </div>
+                        
                     </div>
-                    <div class="info_profile">
+                    <div class="info_profile comunidadeiconhover">
                         <img src="img/pp.PNG" alt="Foto de perfil do usuário">
                         <p>@Lucas</p>
                     </div>
@@ -140,10 +147,14 @@
                 <p>Donate pro gaules</p>
                 <div class="info_div">
                     <div class="info_social">
-                        <img src="img/comentario.svg" alt=""> <p>4</p>
-                        <img src="img/likes.svg" alt=""> <p>1</p>
+                        <div class="comunidadeiconhover">
+                            <img src="img/comentario.svg" alt=""> <p>4</p>
+                        </div>
+                        <div class="comunidadeiconhover" onclick="functionlike(this);">
+                            <img src="img/likes.svg" alt=""> <p id="like2">1</p>
+                        </div>
                     </div>
-                    <div class="info_profile">
+                    <div class="info_profile comunidadeiconhover">
                         <img src="img/comunidade/gaules.jpg" alt="Foto de perfil do usuário">
                         <p>@gaules</p>
                     </div>
@@ -161,10 +172,12 @@
                 <p>Printa a letra de sorriso ronaldo.</p>
                 <div class="info_div">
                     <div class="info_social">
-                        <img src="img/comentario.svg" alt=""> <p>2</p>
-                        <img src="img/likes.svg" alt=""> <p>2130</p>
+                        <div class="comunidadeiconhover">
+                            <img src="img/comentario.svg" alt=""> <p>2</p>
+                        </div>
+                        <div class="comunidadeiconhover" onclick="functionlike(this);"><img src="img/likes.svg" alt=""><p id="like3">2130</p></div>
                     </div>
-                    <div class="info_profile">
+                    <div class="info_profile comunidadeiconhover">
                         <img src="img/comunidade/tody.jpeg" alt="Foto de perfil do usuário">
                         <p>@Tody</p>
                     </div>
@@ -179,13 +192,17 @@
             </div>
             <div class="info_projeto">
                 <h2>Bololo Veinho</h2>
-                <p>Bololo Veinho - MCs Ryan SP, Davi, Kelvinho (GR6 Explode)</p>
+                <p>Bololo Veinho - (GR6 Explode)</p>
                 <div class="info_div">
                     <div class="info_social">
-                        <img src="img/comentario.svg" alt=""> <p>0</p>
-                        <img src="img/likes.svg" alt=""> <p>-2</p>
+                        <div class="comunidadeiconhover">
+                            <img src="img/comentario.svg" alt=""> <p>0</p>
+                        </div>
+                        <div class="comunidadeiconhover" onclick="functionlike(this);">
+                            <img src="img/likes.svg" alt=""> <p id="like4">-2</p>
+                        </div>
                     </div>
-                    <div class="info_profile">
+                    <div class="info_profile comunidadeiconhover">
                         <img src="img/comunidade/colomibni.jpeg" alt="Foto de perfil do usuário">
                         <p>@colombini</p>
                     </div>
@@ -199,5 +216,5 @@
     <div id="chupeta"></div>
 
 </body>
-<script src="comunidade.js"></script>
+<script src="js/comunidade.js"></script>
 </html>
