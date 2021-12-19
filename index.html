@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/alura.ico">
     <title>AluraDev</title>
+    <link rel="stylesheet" href="css/styles/monokai-sublime.min.css"> 
+    <link rel="stylesheet" href="css/styles/atom-one-dark.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/textblock.css">
@@ -14,7 +16,6 @@
     <link rel="stylesheet" href="css/personalizacao.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/navbar_desktop.css">
-
 </head>
 
 <body>
@@ -117,8 +118,8 @@
             <div class="padding">
                 <div id="rgbcontainer">
                     <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
-                    <textarea name="codigo" cols="10" rows="17" placeholder="Digite o código."></textarea>
-                </div>
+                    <code class="hljs html preview nohighlight" contenteditable="true" aria-label="editor"></code>
+                </div>  
 
                 <div class="alinhamento">
                     <button id="buttonhighlight">Visualizar com o highlight</button>
@@ -130,7 +131,7 @@
                         <div id="seuprojeto">
                             <label for="projeto">Seu projeto</label>
                             <input type="text" id="projeto" placeholder="Nome do seu projeto" class="formulario" rows="2">
-                            <input type="text" placeholder="Descrição do seu projeto" class="formulario" maxlength="40">
+                            <textarea rows="2" placeholder="Descrição do seu projeto" class="formulario" maxlength="70"></textarea>
                         </div>
                     </div>
 
@@ -140,19 +141,22 @@
 
                             <div id="selectcor">
                                 <select id="linguagem">
-                                    <option selected disabled>Selecione</option>
-                                    <option>JavaScript</option>
-                                    <option>Python</option>
+                                    <!--<option selected disabled>Selecione</option>-->
+                                    <option value="html">HTML</option>
+                                    <option value="css">CSS</option>
+                                    <option value="javascript">JavaScript</option>
+                                    <option value="python">Python</option>
+                                    <option value="c">C</option>
                                 </select>
                                 <input type="color" id="cor" value="#6BD1FF">
                             </div>
                     
-
                             <input type="submit" id="salvarprojeto" value="Salvar projeto">
                         </div>
                     </div>
                 </div>
         </div>
 </body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 <script src="js/myscript.js"></script>
 </html>

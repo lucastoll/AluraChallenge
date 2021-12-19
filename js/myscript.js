@@ -194,3 +194,46 @@ rgbcontainer.style.background = inputcolor.value
 inputcolor.addEventListener('input', function() {
   rgbcontainer.style.background = inputcolor.value
 })
+
+
+/* Highlight */
+
+const linguagem = document.getElementById('linguagem')
+const botao = document.getElementById('buttonhighlight')
+var controlebotao = 0;
+
+linguagem.addEventListener('change', () => {  /* Mudar linguagem */
+  let codigo = rgbcontainer.querySelector('code');
+  rgbcontainer.innerHTML = ` <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
+  <code class="hljs ${linguagem.value} preview" contenteditable="true" aria-label="editor"></code> `
+  rgbcontainer.lastElementChild.textContent = codigo.textContent;
+  controlebotao = 1; /* Voltar para o estado inicial do botão quando trocar de linguagem */
+  clickhighlight(); 
+})
+
+botao.addEventListener('click', () => { /* Aplicar highlight */
+  let codigo = rgbcontainer.querySelector('code')
+  hljs.highlightElement(codigo)
+  clickhighlight(codigo);
+})
+
+function clickhighlight(codigo) {
+  if(controlebotao==0) /* Botão não pressionado*/
+  { 
+    botao.textContent = "Voltar a editar"
+    botao.style.background = "#5081FB"
+    botao.style.color = "black"
+    controlebotao = 1
+    document.querySelector("code").setAttribute('contenteditable', 'false')
+  }
+  else /* Botão pressionado */
+  {
+    botao.textContent = "Visualizar com o highlight"
+    botao.style.color = "white"
+    botao.style.background = "#5080fb2d"
+    controlebotao = 0
+
+    document.querySelector("code").setAttribute('contenteditable', 'true')
+    rgbcontainer.lastElementChild.textContent = codigo.textContent; /* Tirar o highlight, esta variavel codigo contém o codigo antes do highlight */
+  }
+}

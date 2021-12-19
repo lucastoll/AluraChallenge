@@ -66,16 +66,9 @@
     justify-content: space-between;
 }
 
-.caixa_projeto_impar{
-    padding: 1rem 2rem;
-}
-
-.caixa_projeto_par{
-    padding: 1rem 2rem;
-}
-
 .hhmenu{
     margin-right: 24px;
+    margin-left: 8px;
 }
 
 .hhx{
@@ -92,6 +85,14 @@
 
 .comunidadeiconhover:hover{
     background: #0B254A;
+}
+
+.caixa_projeto_impar{
+    margin: 20px 32px;
+}
+
+.caixa_projeto_par{
+    margin: 20px 32px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -145,11 +146,15 @@
     }
 
     .caixa_projeto_impar{
-        padding: 1rem 1.5rem 0rem 2rem;
+        margin-left: 32px;
+        margin-right: 16px;
+        margin-top: 32px;
     }
     
     .caixa_projeto_par{
-        padding: 1rem 2rem 0rem 0rem;
+        margin-right: 32px;
+        margin-left: 16px;
+        margin-top: 32px;
     }
 
     .fim{

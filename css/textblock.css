@@ -8,7 +8,7 @@
     max-width: calc(1024px - 64px);
     padding: 2rem;
     margin: 0 auto;
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
 main{
@@ -31,9 +31,55 @@ textarea{
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
 }
 
-textarea:focus {
-    outline: none !important;
+.preview {
+    display: block;
+    height: 305.1px;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    resize: none;
+    background: #141414;
+    color: white;
+    font-family:  'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    border: 0px;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    scrollbar-color: #bebcbc #141414;
+    scrollbar-width: thin;
+    white-space: pre-wrap;
 }
+
+
+.preview:focus {
+    outline: none !important;
+    border: none !important;
+}
+  .preview::-webkit-scrollbar {
+    width: 1rem;
+  }
+  .preview::-webkit-scrollbar-track {
+    background-color: #bebcbc;
+    border-radius: 4px;
+  }
+  .preview::-webkit-scrollbar-thumb {
+    background-color: #141414;
+    border-radius: 4px;
+  }
+
+code.hljs{
+    padding: 1rem;
+}
+
+.codigo-wrapper {
+    height: 100%;
+    margin-bottom: 32px;
+}
+
+
 
 #mac
 {
