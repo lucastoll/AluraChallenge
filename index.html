@@ -118,7 +118,9 @@
             <div class="padding">
                 <div id="rgbcontainer">
                     <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
-                    <code class="hljs html preview nohighlight" contenteditable="true" aria-label="editor"></code>
+                    <div class="codigo-wrapper">
+                        <code class="hljs preview" contenteditable="true" aria-label="Editor de código">console.log("Digite seu código aqui!");</code>
+                    </div>
                 </div>  
 
                 <div class="alinhamento">
@@ -127,33 +129,35 @@
             </div>
         </div>
                 <div class="grupo">
-                    <div class="seuprojeto padding"> <!-- Grid area -->
-                        <div id="seuprojeto">
-                            <label for="projeto">Seu projeto</label>
-                            <input type="text" id="projeto" placeholder="Nome do seu projeto" class="formulario" rows="2">
-                            <textarea rows="2" placeholder="Descrição do seu projeto" class="formulario" maxlength="70"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="personalizacao"> <!-- Grid area -->
-                        <div id="personalizacao">
-                            <label for="linguagem">Personalização</label>
-
-                            <div id="selectcor">
-                                <select id="linguagem">
-                                    <!--<option selected disabled>Selecione</option>-->
-                                    <option value="html">HTML</option>
-                                    <option value="css">CSS</option>
-                                    <option value="javascript">JavaScript</option>
-                                    <option value="python">Python</option>
-                                    <option value="c">C</option>
-                                </select>
-                                <input type="color" id="cor" value="#6BD1FF">
+                    <form>
+                        <div class="seuprojeto padding"> <!-- Grid area -->
+                            <div id="seuprojeto">
+                                <label for="projeto">Seu projeto</label>
+                                <input type="text" id="projeto" placeholder="Nome do seu projeto" class="formulario" rows="2" value="" required autocomplete="off">
+                                <textarea rows="2" placeholder="Descrição do seu projeto" class="formulario" maxlength="70" id="descricao" value="" required></textarea>
                             </div>
-                    
-                            <input type="submit" id="salvarprojeto" value="Salvar projeto">
                         </div>
-                    </div>
+
+                        <div class="personalizacao"> <!-- Grid area -->
+                            <div id="personalizacao">
+                                <label for="linguagem">Personalização</label>
+
+                                <div id="selectcor">
+                                    <select id="linguagem" required>
+                                        <!--<option selected disabled>Selecione</option>-->
+                                        <option value="javascript">JavaScript</option>
+                                        <option value="html">HTML</option>
+                                        <option value="css">CSS</option>
+                                        <option value="python">Python</option>
+                                        <option value="c">C</option>
+                                    </select>
+                                    <input type="color" id="cor" value="#6BD1FF" required>
+                                </div>
+                        
+                                <input type="submit" id="salvarprojeto" value="Salvar projeto">
+                            </div>
+                        </div>
+                    </form>
                 </div>
         </div>
 </body>

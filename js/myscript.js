@@ -198,42 +198,57 @@ inputcolor.addEventListener('input', function() {
 
 /* Highlight */
 
-const linguagem = document.getElementById('linguagem')
-const botao = document.getElementById('buttonhighlight')
+const linguagem = document.querySelector('#linguagem')
+const areaDoCodigo = document.querySelector('.codigo-wrapper')
+const botao = document.querySelector('#buttonhighlight')
 var controlebotao = 0;
 
-linguagem.addEventListener('change', () => {  /* Mudar linguagem */
-  let codigo = rgbcontainer.querySelector('code');
-  rgbcontainer.innerHTML = ` <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
-  <code class="hljs ${linguagem.value} preview" contenteditable="true" aria-label="editor"></code> `
-  rgbcontainer.lastElementChild.textContent = codigo.textContent;
-  controlebotao = 1; /* Voltar para o estado inicial do botão quando trocar de linguagem */
-  clickhighlight(); 
-})
+function aplicaHighlight() {
+    const codigo = areaDoCodigo.innerText
+    areaDoCodigo.innerHTML = `<code class="preview hljs ${linguagem.value}" contenteditable="true" aria-label="Editor de código"></code>`
+    areaDoCodigo.querySelector('code').textContent = codigo
+    hljs.highlightElement(areaDoCodigo.querySelector('code'))
 
-botao.addEventListener('click', () => { /* Aplicar highlight */
-  let codigo = rgbcontainer.querySelector('code')
-  hljs.highlightElement(codigo)
-  clickhighlight(codigo);
-})
-
-function clickhighlight(codigo) {
-  if(controlebotao==0) /* Botão não pressionado*/
-  { 
-    botao.textContent = "Voltar a editar"
-    botao.style.background = "#5081FB"
-    botao.style.color = "black"
-    controlebotao = 1
-    document.querySelector("code").setAttribute('contenteditable', 'false')
-  }
-  else /* Botão pressionado */
-  {
-    botao.textContent = "Visualizar com o highlight"
-    botao.style.color = "white"
-    botao.style.background = "#5080fb2d"
-    controlebotao = 0
-
-    document.querySelector("code").setAttribute('contenteditable', 'true')
-    rgbcontainer.lastElementChild.textContent = codigo.textContent; /* Tirar o highlight, esta variavel codigo contém o codigo antes do highlight */
-  }
+    if(controlebotao==0) /* Botão não pressionado*/
+    { 
+      botao.textContent = "Voltar a editar"
+      botao.style.background = "#5081FB"
+      botao.style.color = "black"
+      controlebotao = 1
+      document.querySelector("code").setAttribute('contenteditable', 'false')
+    }
+    else /* Botão pressionado */
+    {
+      botao.textContent = "Visualizar com o highlight"
+      botao.style.color = "white"
+      botao.style.background = "#5080fb2d"
+      controlebotao = 0
+  
+      document.querySelector("code").setAttribute('contenteditable', 'true')
+      document.querySelector("code").textContent = codigo; /* Tirar o highlight, esta variavel codigo contém o codigo antes do highlight */
+    }
 }
+
+botao.addEventListener('click', () => {
+    aplicaHighlight()
+})
+
+linguagem.addEventListener('change', () => {  /* Mudar linguagem */
+    controlebotao = 1; /* Voltar para o estado inicial do botão quando trocar de linguagem */
+    aplicaHighlight(); 
+  })
+
+/* Submit form */
+
+const myForm = document.querySelector('form')
+
+myForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("deu certo");
+
+    document.getElementById("projeto").value = "";
+    document.getElementById("descricao").value = "";
+    document.getElementById("linguagem").value = "javascript";
+    document.getElementById("cor").value = "#6BD1FF";
+    rgbcontainer.style.background = "#6BD1FF";
+}) 
