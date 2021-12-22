@@ -122,39 +122,35 @@
     }
 
     #textarea_comunidade1{
-        grid-column: 2/3;
-        grid-row: 2;
-        max-width: 37.5vw;
+        grid-row: 3;
     }
 
     #textarea_comunidade2{
-        grid-column: 3/4;
-        grid-row: 2;
-        max-width: 37.5vw
+        grid-row: 3;
     }
     
     #textarea_comunidade3{
-        grid-column: 2/3;
-        grid-row: 3;
-        max-width: 37.5vw
+        grid-row: 2;
     }
 
     #textarea_comunidade4{
-        grid-column: 3/4;
-        grid-row: 3;
-        max-width: 37.5vw
+        grid-row: 2;
     }
 
     .caixa_projeto_impar{
+        grid-column: 2/3;
         margin-left: 32px;
         margin-right: 16px;
         margin-top: 32px;
+        max-width: 37.5vw
     }
     
     .caixa_projeto_par{
+        grid-column: 3/4;
         margin-right: 32px;
         margin-left: 16px;
         margin-top: 32px;
+        max-width: 37.5vw
     }
 
     .fim{

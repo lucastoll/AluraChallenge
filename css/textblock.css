@@ -52,6 +52,8 @@ code.preview{
     white-space: pre-wrap;
     max-height: 387px;
     overflow-y: auto;
+    font-size: 16px;
+
 
     scrollbar-color: #bebcbc #141414;
     scrollbar-width: thin;

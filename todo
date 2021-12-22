@@ -1,9 +1,22 @@
 ------A fazer------
 
-Espaçamento saindo no highlight
+Highlight comunidade
+Projeto indo pra pagina de comunidade
 
 ------Concluido------
 
 Apos clicar em voltar a editar deve tirar o highlight
 Depois que trocar a linguagem o botão tem que voltar para visualize o highlight
 Descrição input mais longo
+Espaçamento saindo no highlight
+
+------Thinking------
+
+Storage.Foreach
+    pega o index
+    if indice == par 
+        função cria par
+    else 
+        função cria impar
+
+

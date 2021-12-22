@@ -203,6 +203,7 @@ const MouseOutMenuLateral = (evento) => {
 
 const ClickMenuLateral = (evento) => {
   const img = document.getElementById('img_desktop_editor')
+  const p = document.getElementById('p_desktop_editor')
   img.src = 'img/editor.svg'
   p.style.opacity = '1'
 }
@@ -231,6 +232,7 @@ const MouseOutMenuLateralMobile = () => {
 
 const ClickMenuLateralMobile = () => {
   const img = document.getElementById('nav_img_mobile')
+  const p = document.getElementById('nav_p_mobile')
   img.src = 'img/comunidade2.svg'
   p.style.opacity = '1'
 }
@@ -260,3 +262,83 @@ function functionlike(e){
     e.lastElementChild.class = "pressed";
   }
 }
+
+/* Storage */
+
+const projetos = JSON.parse(sessionStorage.getItem('projetos')) || []  /* Pega os items diretamente da local storage, caso esteja vazio cria uma array sem nada */
+const container = document.getElementById("container")
+var contador = 0;
+
+projetos.forEach(projeto => {
+  let conteudopar = 
+  `
+  <div class="caixa_projeto_par">
+    <div id="rgbcontainer_comunidade" style="background: ${projeto.cor}">
+      <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
+      <textarea class="scroll" name="codigo" cols="10" rows="17" id="textarea_comunidade" disabled>${projeto.codigo}</textarea>
+    </div>
+    <div class="info_projeto">
+      <h2>${projeto.titulo}</h2>
+      <p>${projeto.descricao}</p>
+      <div class="info_div">
+          <div class="info_social">
+              
+              <div class="comunidadeiconhover">
+              <img src="img/comentario.svg" alt=""> <p>0</p>
+              </div>
+
+              <div class="comunidadeiconhover" onclick="functionlike(this);">
+              <img src="img/likes.svg" alt=""> <p id="like1">0</p>
+              </div>
+              
+          </div>
+          <div class="info_profile comunidadeiconhover">
+              <img src="img/pp.PNG" alt="Foto de perfil do usuário">
+              <p>@Lucas</p>
+          </div>
+      </div>
+    </div>
+  </div>
+  `
+
+  let conteudoimpar = 
+  `
+  <div class="caixa_projeto_impar">
+    <div id="rgbcontainer_comunidade" style="background: ${projeto.cor}">
+      <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
+      <textarea class="scroll" name="codigo" cols="10" rows="17" id="textarea_comunidade" disabled>${projeto.codigo}</textarea>
+    </div>
+    <div class="info_projeto">
+      <h2>${projeto.titulo}</h2>
+      <p>${projeto.descricao}</p>
+      <div class="info_div">
+          <div class="info_social">
+              
+              <div class="comunidadeiconhover">
+              <img src="img/comentario.svg" alt=""> <p>0</p>
+              </div>
+
+              <div class="comunidadeiconhover" onclick="functionlike(this);">
+              <img src="img/likes.svg" alt=""> <p id="like1">0</p>
+              </div>
+              
+          </div>
+          <div class="info_profile comunidadeiconhover">
+              <img src="img/pp.PNG" alt="Foto de perfil do usuário">
+              <p>@Lucas</p>
+          </div>
+      </div>
+    </div>
+  </div>
+  `
+
+  if(contador % 2 == 0)
+  {
+    container.innerHTML = container.innerHTML + conteudoimpar
+  }
+  else
+  {
+    container.innerHTML = container.innerHTML + conteudopar
+  }
+  contador++;
+})

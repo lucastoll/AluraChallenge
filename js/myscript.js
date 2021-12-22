@@ -147,6 +147,7 @@ const MouseOutMenuLateral = () => {
 
 const ClickMenuLateral = () => {
   const img = document.getElementById('img_desktop_comunidade')
+  const p = document.getElementById('p_desktop_comunidade')
   img.src = 'img/comunidade2.svg'
   p.style.opacity = '1'
 }
@@ -175,6 +176,7 @@ const MouseOutMenuLateralMobile = () => {
 
 const ClickMenuLateralMobile = () => {
   const img = document.getElementById('nav_img_mobile')
+  const p = document.getElementById('nav_p_mobile')
   img.src = 'img/comunidade2.svg'
   p.style.opacity = '1'
 }
@@ -238,17 +240,36 @@ linguagem.addEventListener('change', () => {  /* Mudar linguagem */
     aplicaHighlight(); 
   })
 
-/* Submit form */
+
+  /* Storage / Submit listener */
 
 const myForm = document.querySelector('form')
 
 myForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("deu certo");
+    alert("Código registrado com sucesso!\nVerifique seu projeto na aba de comunidades.")
+    let titulo = document.getElementById("projeto").value
+    let descricao = document.getElementById("descricao").value
+    let linguagem = document.getElementById("linguagem").value
+    let cor = document.getElementById("cor").value
+    let codigo = document.querySelector("code").innerText;
 
+    /* Checar e enviar dados para a storage */
+    const projetos = JSON.parse(sessionStorage.getItem('projetos')) || []  /* Pega os items diretamente da local storage, caso esteja vazio cria uma array sem nada */
+    const dados = {
+      titulo, descricao, linguagem, cor, codigo
+    }
+    const projetosAtualizadas = [...projetos, dados] 
+    sessionStorage.setItem('projetos', JSON.stringify(projetosAtualizadas)) 
+
+
+    /* Resetar campo de código */
+    document.querySelector("code").innerText = "";
     document.getElementById("projeto").value = "";
     document.getElementById("descricao").value = "";
     document.getElementById("linguagem").value = "javascript";
     document.getElementById("cor").value = "#6BD1FF";
     rgbcontainer.style.background = "#6BD1FF";
 }) 
+
+
