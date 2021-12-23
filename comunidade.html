@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/alura.ico">
+    <link rel="stylesheet" href="css/styles/atom-one-dark.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/textblock.css">
@@ -112,20 +113,23 @@
         <div class="caixa_projeto_impar">
             <div id="rgbcontainer_comunidade">
                 <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
-                <textarea class="scroll" name="codigo" cols="10" rows="17" id="textarea_comunidade" disabled></textarea>
+                <pre><code class="hljs preview python" contenteditable="false" aria-label="Editor de código" id="c1"></code></pre>
             </div>
             <div class="info_projeto">
-                <h2>Validador de CPF</h2>
-                <p>Digite um CPF que o pai fala se é valido ou não.</p>
+                <div class="space_between">
+                <h2>Erro personalizado</h2>
+                <h3>Python</h3>
+                </div>
+                <p>Como fazer um erro personalizado e exibi-lo.</p>
                 <div class="info_div">
                     <div class="info_social">
                         
                         <div class="comunidadeiconhover">
-                        <img src="img/comentario.svg" alt=""> <p>5</p>
+                        <img src="img/comentario.svg" alt=""><p>5</p>
                         </div>
 
                         <div class="comunidadeiconhover" onclick="functionlike(this);">
-                        <img src="img/likes.svg" alt=""> <p id="like1">9</p>
+                        <img src="img/likes.svg" alt=""><p id="like1">9</p>
                         </div>
                         
                     </div>
@@ -140,18 +144,21 @@
         <div class="caixa_projeto_par">
             <div id="rgbcontainer_comunidade" style="background-color: rgb(48, 238, 41);">
                 <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
-                <textarea class="scroll" name="codigo" cols="10" rows="17" id="textarea_comunidade2" disabled></textarea>
+                <pre><code class="hljs preview c" contenteditable="false" aria-label="Editor de código" id="c2"></code></pre>
             </div>
             <div class="info_projeto">
+                <div class="space_between">
                 <h2>Gau?</h2>
+                <h3>C</h3>
+                </div>
                 <p>Donate pro gaules</p>
                 <div class="info_div">
                     <div class="info_social">
                         <div class="comunidadeiconhover">
-                            <img src="img/comentario.svg" alt=""> <p>4</p>
+                            <img src="img/comentario.svg" alt=""><p>4</p>
                         </div>
                         <div class="comunidadeiconhover" onclick="functionlike(this);">
-                            <img src="img/likes.svg" alt=""> <p id="like2">1</p>
+                            <img src="img/likes.svg" alt=""><p id="like2">1</p>
                         </div>
                     </div>
                     <div class="info_profile comunidadeiconhover">
@@ -165,15 +172,18 @@
         <div class="caixa_projeto_impar">
             <div id="rgbcontainer_comunidade" style="background-color: brown;">
                 <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
-                <textarea class="scroll" name="codigo" cols="10" rows="17" id="textarea_comunidade3" disabled></textarea>
+                <pre><code class="hljs preview javascript" contenteditable="false" aria-label="Editor de código" id="c3"></code></pre>
             </div>
             <div class="info_projeto">
+                <div class="space_between">
                 <h2>Sorriso ronaldo.</h2>
+                <h3>JavaScript</h3>
+                </div>
                 <p>Printa a letra de sorriso ronaldo.</p>
                 <div class="info_div">
                     <div class="info_social">
                         <div class="comunidadeiconhover">
-                            <img src="img/comentario.svg" alt=""> <p>2</p>
+                            <img src="img/comentario.svg" alt=""><p>2</p>
                         </div>
                         <div class="comunidadeiconhover" onclick="functionlike(this);"><img src="img/likes.svg" alt=""><p id="like3">2130</p></div>
                     </div>
@@ -188,18 +198,21 @@
         <div class="caixa_projeto_par">
             <div id="rgbcontainer_comunidade" style="background-color: darkorchid;">
                 <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
-                <textarea class="scroll" name="codigo" cols="10" rows="17" id="textarea_comunidade4" disabled></textarea>
+                    <pre><code class="hljs preview javascript" contenteditable="false" aria-label="Editor de código" id="c4"></code></pre>
             </div>
             <div class="info_projeto">
+                <div class="space_between">
                 <h2>Bololo Veinho</h2>
+                <h3>JavaScript</h3>
+                </div>
                 <p>Bololo Veinho - (GR6 Explode)</p>
                 <div class="info_div">
                     <div class="info_social">
                         <div class="comunidadeiconhover">
-                            <img src="img/comentario.svg" alt=""> <p>0</p>
+                            <img src="img/comentario.svg" alt=""><p>0</p>
                         </div>
                         <div class="comunidadeiconhover" onclick="functionlike(this);">
-                            <img src="img/likes.svg" alt=""> <p id="like4">-2</p>
+                            <img src="img/likes.svg" alt=""><p id="like4">-2</p>
                         </div>
                     </div>
                     <div class="info_profile comunidadeiconhover">
@@ -216,6 +229,9 @@
 
     <div id="chupeta"></div>
     
+
 </body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 <script src="js/comunidade.js"></script>
 </html>

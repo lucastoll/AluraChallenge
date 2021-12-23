@@ -1,0 +1,51 @@
+@media (min-width: 768px) {
+    .padding{
+        padding: 16px 2rem;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    #container{
+        display: grid;
+        grid-template-areas: 
+        "header" "header" "header",
+        "navbar" "textblock" "seuprojeto";
+
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    header{
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+
+    .textblock{
+        grid-column: 2/3;
+        grid-row: 2;
+        max-width: 50vw;
+    }
+
+    .grupo{
+        grid-column: 3/4;
+        grid-row: 2;
+        max-width: 25vw;
+    }
+
+    .formulario{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .formulario{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-content-desktop{
+        display: block;
+    }
+}
+

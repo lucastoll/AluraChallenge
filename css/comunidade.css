@@ -12,17 +12,14 @@
 .info_projeto{
     color: white;
     font-family: Inter;
-    padding: 1.5rem 1.5rem 2rem 1.5rem;
+    padding: 2rem;
     background-color: #041832;
     border-radius: 0rem 0rem 0.5rem 0.5rem;
     max-height: 120px;
+    max-width: calc(1024px - 64px);
+    margin: 0 auto;
 }
 
-@media screen and (min-width: 1220px){
-    .info_projeto{
-        max-height: 100px;
-    }
-}
 
 .info_projeto h2{
     font-weight: 700;
@@ -78,7 +75,6 @@
 
 .comunidadeiconhover{
     display: flex;
-    padding: 8px;
     gap: 8px;
     border-radius: 8px;
 }
@@ -95,7 +91,16 @@
     margin: 20px 32px;
 }
 
-@media screen and (min-width: 1024px) {
+.space_between{
+    display: flex;
+    justify-content: space-between;
+}
+
+header{
+    max-width: 1075px;
+}
+
+@media screen and (min-width: 1200px) {
     #container{
         display: grid;
         grid-template-areas: 
@@ -155,6 +160,22 @@
 
     .fim{
         margin-bottom: 2rem;
+    }
+
+    .nav-content-desktop{
+        display: block;
+    }
+
+    .info_projeto{
+        max-height: 100px;
+    }
+
+    header{
+        max-width: 9999px;
+    }
+
+    #searchbar{
+        max-width: 1200px;
     }
 }
 

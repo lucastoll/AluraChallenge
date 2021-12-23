@@ -1,65 +1,34 @@
 /* Textarea códigos */
 
 var codigo1 = 
-`cpf = input("Digite seu CPF completo (só números):")
-# cpf = cpf_completo[:-2]
-multiplicador = 10
-storage = 0
-c = []
+`class TaErrado(Exception):
+  pass
 
-digit_map = map(int, cpf)  # Converte a string cpf para int
-lista_1 = list(digit_map)  # Passa os elementos inteiros para uma c
-somatorio = 0
-# PRIMEIRO DIGITO
+def testar():
+  raise TaErrado('Você fez errado!')
 
-for numero in lista_1:  # For para realizar a formula em que os números do cpf são multiplicados
-    numero = numero * multiplicador
-    somatorio = somatorio + numero
-    multiplicador -= 1
-
-conta = 11 - (somatorio % 11)
-primeiro_digito = 0
-if conta > 9:  # Na validação de cpf, se o valor da conta for maior ou igual a 9 o digito vai para 0.
-    primeiro_digito = 0
-else:
-    primeiro_digito = conta   # Caso contrário o digito vale o valor da conta.
-    primeiro_digito = str(primeiro_digito)
-
-cpf_n1 = cpf + primeiro_digito
-print(cpf_n1)  # Cpf com o primeiro digito incluido
-
-digit_map = map(int, cpf_n1)  # Converte a string cpf para int
-lista_2 = list(digit_map)  # Passa os elementos inteiros para uma c
-
-# SEGUNDO DIGITO - mesmo princípio seguido acima
-somatorio = 0
-multiplicador = 11
-for numero in lista_2:
-    numero = numero * multiplicador
-    somatorio = somatorio + numero
-    multiplicador -= 1
-
-conta_2 = 11 - (somatorio % 11)  # Conta necessária para descobrir o segundo número do cpf
-segundo_digito = 0
-
-if conta_2 >= 9:
-    segundo_digito = '0'
-else:
-    segundo_digito = str(conta_2)
-
-cpf_n2 = cpf_n1 + segundo_digito
-print(cpf_n2)
-
-# if cpf_n2 == cpf_completo:
-#     print("CPF VALIDO!")
-# else:
-#     print("CPF INVALIDO")
+try:
+  testar()
+except TaErrado as error:
+  print(f'Error0258: {error}')
 `;
 
-var codigo2 = `Gau?Gau?
-G?3?
-X? XIS? 
-XIS?
+var codigo2 = `#include stdio.h
+
+int main()
+{
+  int i = 0, j = 0;
+  for(i = 0; i < 3; i++)
+  {
+    printf("GAU?")
+  }
+  printf("G?3?")
+  printf("X?")
+  for(j = 0; j < 2; j++)
+  {
+    printf("XIS?")
+  }
+}
 `;
 
 var codigo3 = `console.log("Sorri, Sorri");
@@ -88,16 +57,16 @@ console.log("Esse é o Sorrizo Ronaldo");
 
 var codigo4 = `console.log("bololo veinho");`
 
-var textarea1 = document.getElementById("textarea_comunidade");
+var textarea1 = document.getElementById("c1");
 textarea1.innerHTML = codigo1;
 
-var textarea2 = document.getElementById("textarea_comunidade2");
+var textarea2 = document.getElementById("c2");
 textarea2.innerHTML = codigo2;
 
-var textarea3 = document.getElementById("textarea_comunidade3");
+var textarea3 = document.getElementById("c3");
 textarea3.innerHTML = codigo3;
 
-var textarea4 = document.getElementById("textarea_comunidade4");
+var textarea4 = document.getElementById("c4");
 textarea4.innerHTML = codigo4;
 
 
@@ -106,7 +75,7 @@ textarea4.innerHTML = codigo4;
 var statusnavbar = 0;
 
 function openSideMenu(){
-  if(window.innerWidth <= 1024)
+  if(window.innerWidth <= 1200)
   {
     let iconmenu = document.getElementById("iconmenu");
     let iconx = document.getElementById("iconx");
@@ -124,7 +93,7 @@ function openSideMenu(){
 }
 
 function closeSideMenu(){
-  if(window.innerWidth <= 1024 || statusnavbar == 2)
+  if(window.innerWidth <= 1200 || statusnavbar == 2)
   {
     let iconmenu = document.getElementById("iconmenu");
     let iconx = document.getElementById("iconx");
@@ -141,7 +110,7 @@ function closeSideMenu(){
   }
 }
 
-const desktopQuery = window.matchMedia('(min-width: 1025px)');
+const desktopQuery = window.matchMedia('(min-width: 1200px)');
 
 function tabletdesktop(e){
   if (e.matches) {
@@ -267,18 +236,32 @@ function functionlike(e){
 
 const projetos = JSON.parse(sessionStorage.getItem('projetos')) || []  /* Pega os items diretamente da local storage, caso esteja vazio cria uma array sem nada */
 const container = document.getElementById("container")
-var contador = 0;
+var contador = 1;
 
 projetos.forEach(projeto => {
-  let conteudopar = 
+  let auxlinguagem = ""
+  if(projeto.linguagem == "javascript")
+    auxlinguagem += "JavaScript"
+  else if(projeto.linguagem == "python")
+    auxlinguagem += "Python"
+  else if(projeto.linguagem == "c")
+    auxlinguagem += "C"
+  else if(projeto.linguagem == "html")
+    auxlinguagem += "HTML"
+  else
+    auxlinguagem += "CSS"
+
+  let conteudo = 
   `
-  <div class="caixa_projeto_par">
-    <div id="rgbcontainer_comunidade" style="background: ${projeto.cor}">
+  <div id="rgbcontainer_comunidade" style="background: ${projeto.cor}">
       <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
-      <textarea class="scroll" name="codigo" cols="10" rows="17" id="textarea_comunidade" disabled>${projeto.codigo}</textarea>
+      <pre><code class="hljs preview ${projeto.linguagem}" contenteditable="false" aria-label="Editor de código" id="c1">${projeto.codigo}</code></pre>
     </div>
     <div class="info_projeto">
+      <div class="space_between">
       <h2>${projeto.titulo}</h2>
+      <h3>${auxlinguagem}</h3>
+      </div>
       <p>${projeto.descricao}</p>
       <div class="info_div">
           <div class="info_social">
@@ -298,47 +281,25 @@ projetos.forEach(projeto => {
           </div>
       </div>
     </div>
-  </div>
   `
+  const divpar = document.createElement('div')
+  const divimpar = document.createElement('div')
 
-  let conteudoimpar = 
-  `
-  <div class="caixa_projeto_impar">
-    <div id="rgbcontainer_comunidade" style="background: ${projeto.cor}">
-      <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
-      <textarea class="scroll" name="codigo" cols="10" rows="17" id="textarea_comunidade" disabled>${projeto.codigo}</textarea>
-    </div>
-    <div class="info_projeto">
-      <h2>${projeto.titulo}</h2>
-      <p>${projeto.descricao}</p>
-      <div class="info_div">
-          <div class="info_social">
-              
-              <div class="comunidadeiconhover">
-              <img src="img/comentario.svg" alt=""> <p>0</p>
-              </div>
 
-              <div class="comunidadeiconhover" onclick="functionlike(this);">
-              <img src="img/likes.svg" alt=""> <p id="like1">0</p>
-              </div>
-              
-          </div>
-          <div class="info_profile comunidadeiconhover">
-              <img src="img/pp.PNG" alt="Foto de perfil do usuário">
-              <p>@Lucas</p>
-          </div>
-      </div>
-    </div>
-  </div>
-  `
+  divpar.classList.add('caixa_projeto_par')
+  divimpar.classList.add('caixa_projeto_impar')
 
   if(contador % 2 == 0)
   {
-    container.innerHTML = container.innerHTML + conteudoimpar
+    divpar.innerHTML = conteudo;
+    container.appendChild(divpar)
   }
   else
   {
-    container.innerHTML = container.innerHTML + conteudopar
+    divimpar.innerHTML = conteudo;
+    container.appendChild(divimpar)
   }
   contador++;
 })
+
+/* Highlight */

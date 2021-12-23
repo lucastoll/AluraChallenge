@@ -48,7 +48,7 @@ function tabletdesktop(e){
     contpersonalizacao.style.gap = "0px";
     inputcor.style.margin = "1rem 0px 0px 0px";
 
-    if(statusnavbar == 1){ /* Previnir que a navbar esteja fechada quando a width ultrapassa 1024pxs */
+    if(statusnavbar == 1){ /* Previnir que a navbar esteja fechada quando a width ultrapassa  */
       statusnavbar = 2;
       closeSideMenu();
     }
