@@ -266,16 +266,16 @@ projetos.forEach(projeto => {
       <div class="info_div">
           <div class="info_social">
               
-              <div class="comunidadeiconhover">
+              <div class="comunidadeiconhover transition">
               <img src="img/comentario.svg" alt=""> <p>0</p>
               </div>
 
-              <div class="comunidadeiconhover" onclick="functionlike(this);">
+              <div class="comunidadeiconhover transition" onclick="functionlike(this);">
               <img src="img/likes.svg" alt=""> <p id="like1">0</p>
               </div>
               
           </div>
-          <div class="info_profile comunidadeiconhover">
+          <div class="info_profile comunidadeiconhover transition">
               <img src="img/pp.PNG" alt="Foto de perfil do usuário">
               <p>@Lucas</p>
           </div>

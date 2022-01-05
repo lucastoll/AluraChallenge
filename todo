@@ -23,3 +23,16 @@ Storage.Foreach
         função cria impar
 
 
+Formas de salvar 
+
+html canvas
+domtoimage + file-saver.js
+
+
+https://github.com/tsayen/dom-to-image
+https://github.com/eligrey/FileSaver.js/
+
+https://www.youtube.com/watch?v=-PivAoyK9OQ
+
+https://github.com/Pdroh/alurachallenge-frontend-2021/tree/master/assets/js/modulos
+

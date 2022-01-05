@@ -72,3 +72,6 @@ header{
     padding: 16px 1rem;
 }
 
+.transition{
+    transition: 0.2s ease-in-out;
+}

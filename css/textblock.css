@@ -9,6 +9,7 @@
     padding: 2rem;
     margin: 0 auto;
     border-radius: 8px;
+    transition: 0s;
 }
 
 main{
@@ -80,18 +81,56 @@ background-color: #141414;
 {
     background: #141414;
     width: 100%;
-    height: 2rem;
+    height: 2.5rem;
     border-radius: 8px 8px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#mac img{
-    margin: 1rem;
+#macbutton{
+    margin: 16px;
+    width: 52px;
+    height: 12px;
 }
 
+#export{
+    width: 40px;
+    height: 32px;
+    margin-top: 8px;
+    margin-right: 10px;
+    height: 30px;
+    align-self: flex-end;
+}
 
+#screenshot{
+    cursor: pointer;
+}
 
-#buttonhighlight:hover{
-    background: #5081FB3D;
+#selectexport{
+    width: 66px;
+    height: 24px;
+    margin-right: 16px;
+    padding: 0px;
+    border-radius: 4px;
+    background: #141414;
+    border: 2px solid white;
+}
+
+#divexport{
+    display: flex;
+    align-items: center;
+}
+
+.botaonaoativo:hover{
+    background: #5081FB3D!important;
+    cursor: pointer; 
+}
+
+.botaoativo:hover{
+    background: #7BA4FC!important;
+    cursor: pointer; 
 }
 
 #buttonhighlight:active {

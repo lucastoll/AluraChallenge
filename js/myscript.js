@@ -207,7 +207,7 @@ var controlebotao = 0;
 
 function aplicaHighlight() {
     const codigo = areaDoCodigo.innerText
-    areaDoCodigo.innerHTML = `<code class="preview hljs ${linguagem.value}" contenteditable="true" aria-label="Editor de código"></code>`
+    areaDoCodigo.innerHTML = `<code class="preview hljs ${linguagem.value}" contenteditable="true" aria-label="Editor de código" id="code"></code>`
     areaDoCodigo.querySelector('code').textContent = codigo
     hljs.highlightElement(areaDoCodigo.querySelector('code'))
 
@@ -218,6 +218,8 @@ function aplicaHighlight() {
       botao.style.color = "black"
       controlebotao = 1
       document.querySelector("code").setAttribute('contenteditable', 'false')
+      botao.classList.add("botaoativo")
+      botao.classList.remove("botaonaoativo")
     }
     else /* Botão pressionado */
     {
@@ -226,6 +228,8 @@ function aplicaHighlight() {
       botao.style.background = "#5080fb2d"
       controlebotao = 0
   
+      botao.classList.add("botaonaoativo")
+      botao.classList.remove("botaoativo")
       document.querySelector("code").setAttribute('contenteditable', 'true')
       document.querySelector("code").textContent = codigo; /* Tirar o highlight, esta variavel codigo contém o codigo antes do highlight */
     }
@@ -272,4 +276,82 @@ myForm.addEventListener("submit", (e) => {
     rgbcontainer.style.background = "#6BD1FF";
 }) 
 
+/* Exportar imagem do código */
 
+const botaoexport = document.getElementById('export')
+
+botaoexport.addEventListener("click", () => {
+  if(controlebotao == 0)
+    aplicaHighlight()
+  const code = document.getElementById('code');
+  const divexport = document.getElementById('divexport');
+  const selectformato = document.getElementById('selectexport');
+  let nomearquivo = document.getElementById("projeto").value;
+  if(nomearquivo=="")
+  {
+    nomearquivo = 'meu-codigo'
+  }
+  areaDoCodigo.style.height = 'auto'; /* codigo-wrapper */
+  code.style.maxHeight = 'none';
+  divexport.style.display = 'none';
+
+  if(selectformato.value == 'png')
+  {
+    png(nomearquivo)
+  }
+  else if(selectformato.value == 'jpeg')
+  {
+    rgbcontainer.style.borderRadius = '0px';
+    jpeg(nomearquivo)
+  }
+  else
+  {
+    rgbcontainer.style.borderRadius = '0px';
+    svg(nomearquivo)
+  }
+})
+
+function png(nomearquivo){
+  domtoimage.toBlob(rgbcontainer)
+  .then(function (blob) {
+      window.saveAs(blob, `${nomearquivo}.png`);
+      areaDoCodigo.style.height = '337px'; /* codigo-wrapper */
+      code.style.maxHeight = '390px';
+      divexport.style.display = 'flex'
+  });
+}
+
+function jpeg(nomearquivo){
+  domtoimage.toJpeg(rgbcontainer, { quality: 1 })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = `${nomearquivo}.jpeg`;
+        link.href = dataUrl;
+        link.click();
+
+        areaDoCodigo.style.height = '337px'; /* codigo-wrapper */
+        code.style.maxHeight = '390px';
+        divexport.style.display = 'flex'
+        rgbcontainer.style.borderRadius = '8px';
+
+    });
+}
+
+function svg(nomearquivo){
+    function filter (node) {
+      return (node.tagName !== 'i');
+  }
+
+  domtoimage.toSvg(rgbcontainer, {filter: filter})
+      .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = `${nomearquivo}.svg`;
+        link.href = dataUrl;
+        link.click();
+
+        areaDoCodigo.style.height = '337px'; /* codigo-wrapper */
+        code.style.maxHeight = '390px';
+        divexport.style.display = 'flex'
+        rgbcontainer.style.borderRadius = '8px';
+      });
+}

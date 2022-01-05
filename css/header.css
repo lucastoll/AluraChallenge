@@ -45,7 +45,7 @@ header{
 .fotodesktop{
     display: none; 
     align-items: center;
-    margin: 1rem 1.5rem 0rem 1.5rem;
+    margin: 1rem 2rem 0rem 1.5rem;
     padding: 12px;
     color: white;
     font-family: Inter;
@@ -92,6 +92,10 @@ header{
 
 .hhx{
     margin-right: 8px;
+}
+
+h3{
+    margin-right: 6px;
 }
 
 @media screen and (max-width: 767px) {
@@ -150,7 +154,7 @@ header{
     
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     #logo{
         margin-left: 10px;
     }
