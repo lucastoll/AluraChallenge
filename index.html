@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/navbar_desktop.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/popup.css">
 </head>
 
 <body>
@@ -143,8 +144,8 @@
                         <div class="seuprojeto padding"> <!-- Grid area -->
                             <div id="seuprojeto">
                                 <label for="projeto">Seu projeto</label>
-                                <input type="text" id="projeto" placeholder="Nome do seu projeto" class="formulario transition" rows="2" value="" required autocomplete="off">
-                                <textarea rows="2" placeholder="Descrição do seu projeto" class="formulario transition" maxlength="70" id="descricao" value="" required></textarea>
+                                <input type="text" id="projeto" placeholder="Nome do seu projeto" class="formulario transition" rows="2" value="" required autocomplete="off" maxlength="19">
+                                <textarea rows="2" placeholder="Descrição do seu projeto" class="formulario transition" maxlength="82" id="descricao" value="" required></textarea>
                             </div>
                         </div>
 
@@ -169,6 +170,14 @@
                         </div>
                     </form>
                 </div>
+        </div>
+
+        <div class="container_popup" id="containerpopup">
+            <div id="popup" class="projetopopup">
+                <h2>PROJETO SALVO!</h2>
+                <p>Seu projeto foi salvo, agora ele está disponível para todos na página de comunidade.</p>
+                <button class="botao_popup" id="botaopopup">OK</button>
+            </div>
         </div>
 </body>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>

@@ -254,7 +254,7 @@ projetos.forEach(projeto => {
   let conteudo = 
   `
   <div id="rgbcontainer_comunidade" style="background: ${projeto.cor}">
-      <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac"></div>
+      <div id="mac"><img src="img/mac_buttons.png" alt="Botoes do mac" id="macbutton"></div>
       <pre><code class="hljs preview ${projeto.linguagem}" contenteditable="false" aria-label="Editor de código" id="c1">${projeto.codigo}</code></pre>
     </div>
     <div class="info_projeto">
@@ -262,7 +262,7 @@ projetos.forEach(projeto => {
       <h2>${projeto.titulo}</h2>
       <h3>${auxlinguagem}</h3>
       </div>
-      <p>${projeto.descricao}</p>
+      <p class="descricao">${projeto.descricao}</p>
       <div class="info_div">
           <div class="info_social">
               

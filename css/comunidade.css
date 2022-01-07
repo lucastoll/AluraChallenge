@@ -32,12 +32,16 @@
     font-weight: 400;
     font-size: 16px;
     opacity: 0.8;
+    max-width: 394px;
+}
+
+.descricao{
+    overflow: hidden;
 }
 
 .info_social{
     display: flex;
     gap: 10px;
-    margin-top: 2rem;
 }
 
 .info_profile{
@@ -100,9 +104,10 @@ header{
     max-width: 1075px;
 }
 
-p{
-    max-height: 20px;
+.info_div{
+    margin-top: 16px;
 }
+
 
 @media screen and (min-width: 1200px) {
     #container{
@@ -182,5 +187,4 @@ p{
         max-width: 1200px;
     }
 }
-
 

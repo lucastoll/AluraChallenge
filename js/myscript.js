@@ -245,15 +245,24 @@ linguagem.addEventListener('change', () => {  /* Mudar linguagem */
   })
 
 
-  /* Storage / Submit listener */
+  /* Storage / Submit listener / Popup */
 
 const myForm = document.querySelector('form')
+const popup = document.querySelector('.container_popup')
+const botaopopup = document.querySelector('.botao_popup')
+
+popup.addEventListener('click', (e) => {
+  if(e.target.id == 'containerpopup' ||e.target.id == 'botaopopup' )
+    popup.style.display = 'none';
+})
+
 
 myForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("Código registrado com sucesso!\nVerifique seu projeto na aba de comunidades.")
+    popup.style.display = 'flex';
     let titulo = document.getElementById("projeto").value
     let descricao = document.getElementById("descricao").value
+    descricao = '\n' + descricao;
     let linguagem = document.getElementById("linguagem").value
     let cor = document.getElementById("cor").value
     let codigo = document.querySelector("code").innerText;
@@ -275,6 +284,7 @@ myForm.addEventListener("submit", (e) => {
     document.getElementById("cor").value = "#6BD1FF";
     rgbcontainer.style.background = "#6BD1FF";
 }) 
+
 
 /* Exportar imagem do código */
 
