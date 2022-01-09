@@ -5,7 +5,7 @@ Website desenvolvido no Challenge Frond-End da Alura, um programa da plataforma 
 O projeto desenvolvido consiste em uma ideia de plataforma para desenvolvedores compartilharem trechos de seus códigos de uma maneira simples e bonita, onde é possível customizar seus códigos e salva-los, deixando-os disponíveis para a comunidade ver e interagir com ele, o projeto não utiliza banco de dados, então os dados são armazenados na storage do navegador, atráves do Web Storage API.
 
 -Endereço do projeto: https://lucastoll.github.io/AluraChallenge/ <br>
--Protótipo figma: https://encurtador.com.br/loS46
+-Protótipo figma: https://www.figma.com/file/Ve4hpTfmMa7yAFneoGtGKD/Alura-Challenge---Edição-Front-end?node-id=207%3A729&viewport=86%2C-1148%2C0.3736729025840759
 
 # 💻 Tecnologias utilizadas
 <ul>
@@ -24,3 +24,8 @@ O projeto desenvolvido consiste em uma ideia de plataforma para desenvolvedores 
       <br>Usadas para desenvolver a funcionalidade para o usuário salvar seu código em uma imagem, sendo que o usuário pode escolher entre os formatos <bold>png, jpeg e svg</bold>
 </ul>
 
+# ⭐ Versão final
+<h2>Editor de código / Index</h2>
+<img src="https://i.imgur.com/mUlki5M.png">
+<h2>Aba comunidade</h2>
+<img src="https://i.imgur.com/JY5Ejjv.png">
