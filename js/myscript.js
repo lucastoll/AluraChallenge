@@ -268,12 +268,12 @@ myForm.addEventListener("submit", (e) => {
     let codigo = document.querySelector("code").innerText;
 
     /* Checar e enviar dados para a storage */
-    const projetos = JSON.parse(sessionStorage.getItem('projetos')) || []  /* Pega os items diretamente da local storage, caso esteja vazio cria uma array sem nada */
+    const projetos = JSON.parse(localStorage.getItem('projetos')) || []  /* Pega os items diretamente da local storage, caso esteja vazio cria uma array sem nada */
     const dados = {
       titulo, descricao, linguagem, cor, codigo
     }
     const projetosAtualizadas = [...projetos, dados] 
-    sessionStorage.setItem('projetos', JSON.stringify(projetosAtualizadas)) 
+    localStorage.setItem('projetos', JSON.stringify(projetosAtualizadas)) 
 
 
     /* Resetar campo de código */
@@ -303,6 +303,7 @@ botaoexport.addEventListener("click", () => {
   }
   areaDoCodigo.style.height = 'auto'; /* codigo-wrapper */
   code.style.maxHeight = 'none';
+  code.style.overflowY = 'hidden';
   divexport.style.display = 'none';
 
   if(selectformato.value == 'png')
@@ -328,6 +329,7 @@ function png(nomearquivo){
       areaDoCodigo.style.height = '337px'; /* codigo-wrapper */
       code.style.maxHeight = '390px';
       divexport.style.display = 'flex'
+      code.style.overflowY = 'none';
   });
 }
 
@@ -343,7 +345,7 @@ function jpeg(nomearquivo){
         code.style.maxHeight = '390px';
         divexport.style.display = 'flex'
         rgbcontainer.style.borderRadius = '8px';
-
+        code.style.overflowY = 'none';
     });
 }
 
@@ -363,5 +365,6 @@ function svg(nomearquivo){
         code.style.maxHeight = '390px';
         divexport.style.display = 'flex'
         rgbcontainer.style.borderRadius = '8px';
+        code.style.overflowY = 'none';
       });
 }

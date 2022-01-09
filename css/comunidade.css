@@ -1,3 +1,9 @@
+    @media screen and (max-width: 425px){
+    html{
+        zoom: 0.9;
+    }
+}
+
 #rgbcontainer_comunidade{
     display: flex;
     flex-direction: column;
@@ -187,4 +193,3 @@ header{
         max-width: 1200px;
     }
 }
-

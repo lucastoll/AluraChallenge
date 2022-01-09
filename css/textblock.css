@@ -116,6 +116,13 @@ background-color: #141414;
     border-radius: 4px;
     background: #141414;
     border: 2px solid white;
+
+    color: white;
+    margin-top: 12px;    
+}
+
+#linguagem option{
+    background: #41536A;
 }
 
 #divexport{

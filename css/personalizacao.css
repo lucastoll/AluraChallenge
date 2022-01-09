@@ -8,7 +8,9 @@
     padding: 0px 16px;
 }
 
-select{
+
+#linguagem
+{
     width: 100%;
     height: 56px;
     box-sizing: border-box;
@@ -27,16 +29,14 @@ select{
     font-size: 16px;
 }
 
-select:hover{
+#linguagem:hover{
     background: rgba(255, 255, 255, 0.24);
     cursor: pointer;
 }
 
-select option{
+#linguagem option{
     background: #41536A;
 }
-
-
 
 .project__language {
     width: 100%;
@@ -81,6 +81,7 @@ border-radius: 4px;
 
 #salvarprojeto{
     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     height: 3.5rem;
     background: #5081FB;
     color: #051D3B;

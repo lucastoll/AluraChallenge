@@ -234,7 +234,7 @@ function functionlike(e){
 
 /* Storage */
 
-const projetos = JSON.parse(sessionStorage.getItem('projetos')) || []  /* Pega os items diretamente da local storage, caso esteja vazio cria uma array sem nada */
+const projetos = JSON.parse(localStorage.getItem('projetos')) || []  /* Pega os items diretamente da local storage, caso esteja vazio cria uma array sem nada */
 const container = document.getElementById("container")
 var contador = 1;
 
