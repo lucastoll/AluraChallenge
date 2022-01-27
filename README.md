@@ -29,3 +29,15 @@ O projeto desenvolvido consiste em uma ideia de plataforma para desenvolvedores 
 <img src="https://i.imgur.com/mUlki5M.png">
 <h2>Aba comunidade</h2>
 <img src="https://i.imgur.com/JY5Ejjv.png">
+
+# 🏅 Badges
+Imagens enviadas aos participantes que completaram o desafio proposto.
+
+<table>
+    <tr>
+      <td><img src="https://user-images.githubusercontent.com/79534537/151368467-3f4e6585-a4a7-4499-8541-a9edc8eaf720.png" width="300" height="300"></td>
+      <td><img src="https://user-images.githubusercontent.com/79534537/151368680-ed2618fb-53f9-424c-87bf-34132994039c.png" width="300" height="300"></td>
+      <td><img src="https://user-images.githubusercontent.com/79534537/151368454-5eebe15b-bcc0-41c4-8850-28bd3d538599.png" width="300" height="300"></td>
+  </tr>
+</table>
+      
